@@ -3,16 +3,19 @@ class Hero {
     this.health = health;
     this.energy = energy;
     this.mana = mana;
+    this.attack();
+    this.wait();
   }
 
   wait() {
     this.energy += 10;
-    this.mana += 10;
   }
 
   attack() {
-    // this is overridden by subclasses
-    throw new Error("attack() method not implemented");
+    const power = Math.floor(this.energy * Math.random());
+    this.energy -= 30;
+
+    return power;
   }
 
   defend() {
@@ -34,18 +37,6 @@ class Paladin extends Hero {
   constructor(health, energy, mana) {
     super(health, energy, mana);
   }
-
-  attack() {
-    const power = Math.floor(this.energy * Math.random());
-    this.energy -= 30;
-    console.log(power);
-    return power;
-  }
-
-  defend() {
-    this.energy -= 10;
-    return Math.floor(Math.random() * 10);
-  }
 }
 
 class Magician extends Hero {
@@ -53,16 +44,15 @@ class Magician extends Hero {
     super(health, energy, mana);
   }
 
+  wait() {
+    this.mana += 10;
+  }
+
   attack() {
     const power = Math.floor(this.mana * Math.random());
     this.mana -= 30;
-    console.log(power);
-    return power;
-  }
 
-  defend() {
-    this.mana -= 10;
-    return Math.floor(Math.random() * 10);
+    return power;
   }
 }
 
