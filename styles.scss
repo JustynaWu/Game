@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+.game-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.button-go {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1rem;
+  background-color: lightcoral;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid lightcoral;
+  border-radius: 4px;
+  transition: all 0.3s;
+  &:hover {
+    color: lightcoral;
+    border-color: lightcoral;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  &.button-disabled {
+    transition: none;
+    background-color: lighten(lightcoral, 15%);
+    border-color: lighten(lightcoral, 15%);
+    pointer-events: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.stats {
+  margin-bottom: 3rem;
+}
+
+.stats-title {
+  margin: 0.3rem 0;
+}
+
+.radio-button {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.result {
+  text-align: center;
+}

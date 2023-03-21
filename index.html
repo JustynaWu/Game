@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="game-container">
+    <div class="" id="paladin">
+      <h2>Paladin</h2>
+      <div class="stats">
+      <p class="stats-title">Health: <b id="paladinHealth"></b></p>
+      <p class="stats-title">Energy: <b id="paladinEnergy"></b></p>
+      </div>
+      <h3 class="options-title">Options:</h3>
+      <div class="radio-button">
+      <input
+        type="radio"
+        name="hero1-action"
+        value="wait"
+        class="radio"
+        id="paladinWait"
+        checked
+      >
+      <label for="paladinWait">
+      Wait
+      </label>
+      </div>
+      <div class="radio-button">
+      </input>
+      <input type="radio" name="hero1-action" value="attack" class="radio" id="paladinAttack">
+      <label for="paladinAttack">
+      Attack
+      </label>
+      </input>
+      </div>
+      <div class="radio-button">
+      <input type="radio" name="hero1-action" value="defend" class="radio" id="paladinDefend">
+      <label for="paladinDefend">
+      Defend
+      </label>
+    </input>
+    </div>
+    </div>
+    <div id="magician">
+      <h2>Magician</h2>
+      <div class="stats">
+      <p class="stats-title">Health: <b id="magicianHealth"></b></p>
+      <p class="stats-title">Mana: <b id="magicianMana"></b></p>
+      </div>
+      <h3 class="options-title">Options:</h3>
+      <div class="radio-button">
+      <input
+        type="radio"
+        name="hero2-action"
+        value="wait"
+        class="radio"
+        id="magicianWait"
+        checked
+      >
+      <label for="magicianWait">
+      Wait
+      </label>
+    </input>
+    </div>
+    <div class="radio-button">
+      <input type="radio" name="hero2-action" value="attack" class="radio" id="magicianAttack">
+      <label for="magicianAttack">
+      Attack
+      </label>
+    </input>
+    </div>
+    <div class="radio-button">
+      <input type="radio" name="hero2-action" value="defend" class="radio" id="magicianDefend">
+      <label for="magicianDefend">
+      Defend
+      </label>
+    </input>
+    </div>
+    </div>
+    </div>
+    <button class="button-go">Go</button>
+    <h2 class="result"></h2>
+  </body>
+</html>
